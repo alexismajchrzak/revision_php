@@ -1,3 +1,13 @@
+<?php
+
+    require_once '../../Core/database.php';
+
+    $req = $pdo->prepare("INSERT INTO topics(idCreator, titleTopic, contentTopic, idCategory) VALUES (?, ?, ?, ?)");
+
+    $req->execute([$_SESSION['auth']->id, $titleTopic, $contentTopic, $_GET['id']]);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +19,7 @@
 </head>
 
 <body>
-    <!--
+    /*
     ----- SYSTEM QUIZ -----
     Accueil :
         - Liste des questions
@@ -18,14 +28,8 @@
         - Formulaire d'inscription
     Connexion :
         - Formulaire de connexion
-    -->
+    */
 
-<form>
-    <label>Voici un formulaire d'inscription</label>
-
-    <input type="text"  id="name"  name="name">
-
-</form>
 
 
 </body>

@@ -24,6 +24,11 @@ Connexion :
     <label>Voici un formulaire d'inscription</label>
     <br/>
 
+    <label> email :  </label>
+    <input type="text" id="emailRegister" name="name">
+
+    <br/>
+
     <label> nom :  </label>
     <input type="text" id="nomRegister" name="name">
 
